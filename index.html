@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReadIt Store | Sua Próxima Leitura</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header-topo">
+        <div class="container header-flex">
+            <h1 class="titulo-site">READIT</h1>
+
+            <div class="busca-container">
+                <input type="text" placeholder="Pesquisar sua próxima leitura..." class="input-busca">
+                <button class="btn-busca">🔍</button>
+            </div>
+
+            <div class="acoes-usuario">
+                <button class="btn-login" onclick="fazerLogin()">LOGIN</button>
+                <div class="carrinho-topo" onclick="toggleCarrinho()">
+                    <span class="cart-icon">🛒</span>
+                    <span id="carrinho-contador">0</span>
+                    <strong>CARRINHO</strong>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav-sub">
+        <div class="container nav-flex">
+            <a href="#">NACIONAIS</a>
+            <a href="#">IMPORTADOS</a>
+            <a href="#">E-BOOKS</a>
+            <a href="#">ACADÊMICOS</a>
+            <a href="#">IDIOMAS</a>
+            <a href="#">PAPELARIA</a>
+            <a href="#">LIVROS EM OFERTA</a>
+        </div>
+    </nav>
+
+    <main class="container layout-grid">
+        
+        <section class="vitrine">
+            <h2 class="sessao-titulo">SUCESSO EM VENDAS</h2>
+            <div class="book-card-grid">
+                <article class="book-card">
+                    <img src="https://m.media-amazon.com/images/I/91XBIxb9c4L.jpg" class="book-cover">
+                    <h3>Contos de Fadas</h3>
+                    <p>Stephen King</p>
+                    <div class="book-details">
+                        <span class="price">R$ 54,90</span>
+                        <span class="rating">⭐ 4.8</span>
+                    </div>
+                    <button class="btn-add" onclick="adicionarAoCarrinho('Contos de Fadas', 54.90)">ADICIONAR À SACOLA</button>
+                </article>
+
+                <article class="book-card">
+                    <img src="https://m.media-amazon.com/images/I/71gXpS2PAgL._AC_UF1000,1000_QL80_.jpg" class="book-cover">
+                    <h3>Torto Arado</h3>
+                    <p>Itamar Vieira Junior</p>
+                    <div class="book-details">
+                        <span class="price">R$ 49,90</span>
+                        <span class="rating">⭐ 4.9</span>
+                    </div>
+                    <button class="btn-add" onclick="adicionarAoCarrinho('Torto Arado', 49.90)">ADICIONAR À SACOLA</button>
+                </article>
+
+                <article class="book-card">
+                    <img src="https://m.media-amazon.com/images/I/81T6Suzjj8L._AC_UF1000,1000_QL80_.jpg" class="book-cover">
+                    <h3>A Mandíbula de Caim</h3>
+                    <p>Edward Powys Mathers</p>
+                    <div class="book-details">
+                        <span class="price">R$ 39,90</span>
+                        <span class="rating">⭐ 4.5</span>
+                    </div>
+                    <button class="btn-add" onclick="adicionarAoCarrinho('A Mandíbula de Caim', 39.90)">ADICIONAR À SACOLA</button>
+                </article>
+
+                <article class="book-card">
+                    <img src="https://m.media-amazon.com/images/I/81SZjMOvHxL._UF1000,1000_QL80_.jpg" class="book-cover">
+                    <h3>Tudo é Rio</h3>
+                    <p>Carla Madeira</p>
+                    <div class="book-details">
+                        <span class="price">R$ 35,00</span>
+                        <span class="rating">⭐ 4.7</span>
+                    </div>
+                    <button class="btn-add" onclick="adicionarAoCarrinho('Tudo é Rio', 35.00)">ADICIONAR À SACOLA</button>
+                </article>
+            </div>
+        </section>
+
+        <aside class="sidebar-categorias">
+            <h2 class="sessao-titulo">CATEGORIAS</h2>
+            <div class="botoes-categorias">
+                <button>Literatura e Ficção</button>
+                <button>Romance</button>
+                <button>Infantojuvenil</button>
+                <button>Policial, Suspense e Mistério</button>
+                <button>HQs e Mangás</button>
+                <button>Fantasia, Horror e Ficção Científica</button>
+                <button>Biografias e Histórias Reais</button>
+                <button>Religião e Espiritualidade</button>
+                <button>Autoajuda</button>
+            </div>
+
+            <a href="#" class="link-ver-mais">Ver mais >>></a>
+        </aside>
+    </main>
+
+    <footer class="footer-newsletter">
+        <div class="newsletter-box">
+            <h3>Receba nossas novidades e sugestões</h3>
+            <div class="newsletter-form">
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="E-mail">
+                <button class="btn-enviar">ENVIAR</button>
+            </div>
+        </div>
+        <p class="atendimento">Atendimento ao cliente: faleconosco@readit.com.br</p>
+    </footer>
+
+    <aside id="carrinho-painel" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>MEU CARRINHO</h3>
+            <button onclick="toggleCarrinho()" class="close-cart">X</button>
+        </div>
+        <div id="carrinho-itens-lista">
+            </div>
+        <div class="cart-footer">
+            <p>Total: <strong id="carrinho-subtotal">R$ 0,00</strong></p>
+            <button class="btn-finalizar">FINALIZAR COMPRA</button>
+        </div>
+    </aside>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
