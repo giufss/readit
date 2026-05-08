@@ -9,7 +9,7 @@ internacionais: livros gringos em portugues
 
 academicos: livros didadicos ou de conteudo para estudo
 
-e-books: qualquer livro
+e-books: qualquer livro digital 
 
 importados: qualquer livro gringo na lingua original (ingles, frances etc)
 
