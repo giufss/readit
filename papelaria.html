@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papelaria | ReadIt Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header-topo">
+        <div class="container header-flex">
+            <h1 class="titulo-site" onclick="window.location.href='index.html'">
+                    READ<span class="titulo-site-span">IT</span>
+                </h1>
+            <div class="busca-container">
+                <input type="text" placeholder="Pesquisar itens de papelaria..." class="input-busca">
+                <button class="btn-busca">🔍</button>
+            </div>
+            <div class="acoes-usuario">
+                <button class="btn-login">LOGIN</button>
+                <div class="carrinho-topo" onclick="toggleCarrinho()" style="cursor:pointer">
+                    🛒 <span id="carrinho-contador">0</span> <strong>CARRINHO</strong>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<nav class="nav-sub">
+    <div class="container nav-flex">
+        <a href="nacionais.html">NACIONAIS</a>
+        <a href="internacionais.html">INTERNACIONAIS</a>
+        <a href="ebooks.html">E-BOOKS</a>
+        <a href="academicos.html">ACADÊMICOS</a>
+        <a href="importados.html">IMPORTADOS</a>
+        <a href="papelaria.html">PAPELARIA</a>
+        <a href="ofertas.html">LIVROS EM OFERTA</a>
+    </div>
+   </nav>
+
+
+    <main class="container">
+        <h2 class="sessao-titulo">PAPELARIA E ACESSÓRIOS</h2>
+        
+        <div class="grid-nacionais">
+            
+<article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/61M-fV6YVFL.jpg" class="book-cover">
+                <h3>Planner 2026</h3>
+                <p>Organização Floral</p>
+                <span class="price">R$ 45,90</span>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Planner 2026', 45.90)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/718LOn2lXNL.jpg" class="book-cover">
+                <h3>Kit Canetas Stabilo</h3>
+                <p>10 Cores Pastéis</p>
+                <span class="price">R$ 89,00</span>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Kit Stabilo', 89.00)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/51v8uInY68L.jpg" class="book-cover">
+                <h3>Caderno Inteligente</h3>
+                <p>Tamanho Médio - Rose</p>
+                <span class="price">R$ 115,00</span>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Caderno Inteligente', 115.00)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/61vGv9XNgeL.jpg" class="book-cover">
+                <h3>Marcadores de Página</h3>
+                <p>Kit com 5 Magnéticos</p>
+                <span class="price">R$ 15,90</span>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Marcadores Magnet', 15.90)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/71P73vKCHfL.jpg" class="book-cover">
+                <h3>Estojo Slim</h3>
+                <p>Couro Sintético Bege</p>
+                <span class="price">R$ 32,00</span>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Estojo Slim', 32.00)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/51F8oY6rF2L.jpg" class="book-cover">
+                <h3>Bloco de Notas Sticky</h3>
+                <p>Cores Pastéis - 400 folhas</p>
+                <span class="price">R$ 24,50</span>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Post-it Pastel', 24.50)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/61R-S-7HAnL.jpg" class="book-cover">
+                <h3>Washi Tapes Kit</h3>
+                <p>12 Rolos Decorados</p>
+                <span class="price">R$ 38,90</span>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Washi Tapes', 38.90)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/51r5Yp7rA8L.jpg" class="book-cover">
+                <h3>Luminária de Leitura</h3>
+                <p>Clip para Livros - LED</p>
+                <span class="price">R$ 29,00</span>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Luminária LED', 29.00)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="" class="book-cover">
+                <p></p>
+                <p><strong>R$ 29,90</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Dom Casmurro', 29.90)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="" class="book-cover">
+                <p></p>
+                <p><strong>R$ 29,90</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Dom Casmurro', 29.90)">ADICIONAR</button>
+            </article>
+        
+            <article class="book-card">
+                <img src="" class="book-cover">
+                <p></p>
+                <p><strong>R$ 29,90</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Dom Casmurro', 29.90)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="" class="book-cover">
+                <p></p>
+                <p><strong>R$ 29,90</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Dom Casmurro', 29.90)">ADICIONAR</button>
+            </article>
+
+        </div>
+
+        <div style="text-align: center; margin: 60px 0;">
+            <button class="btn-login" style="width: 250px;">VER MAIS ITENS</button>
+        </div>
+    </main>
+
+    <footer class="footer-comum">
+    <div class="container">
+        <h3>FALE CONOSCO</h3>
+        <p>+55 (21) 99876-5432 ♦ faleconosco@readit.com.br</p>
+    </div>
+</footer>
+
+    <aside id="carrinho-painel" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>MEU CARRINHO</h3>
+            <button onclick="toggleCarrinho()" style="background:none; border:none; cursor:pointer; font-weight:bold;">X</button>
+        </div>
+        <div id="carrinho-itens-lista"></div>
+        <div style="padding: 20px; border-top: 1px solid #eee;">
+            <p>Total: <strong id="carrinho-subtotal">R$ 0,00</strong></p>
+            <button class="btn-login" style="width: 100%; margin-top: 10px;" onclick="window.location.href='pagamento.html'">FINALIZAR PEDIDO</button>
+        </div>
+    </aside>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

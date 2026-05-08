@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionais | ReadIt </title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header-topo">
+        <div class="container header-flex">
+            <h1 class="titulo-site" onclick="window.location.href='index.html'">
+                    READ<span class="titulo-site-span">IT</span>
+                </h1>
+            <div class="busca-container">
+                <input type="text" placeholder="Pesquisar livros nacionais..." class="input-busca">
+                <button class="btn-busca">🔍</button>
+            </div>
+            <div class="acoes-usuario">
+                <button class="btn-login">LOGIN</button>
+                <div class="carrinho-topo" onclick="toggleCarrinho()" style="cursor:pointer">
+                    🛒 <span id="carrinho-contador">0</span> <strong>CARRINHO</strong>
+                </div>
+            </div>
+        </div>
+    </header>
+
+  <nav class="nav-sub">
+    <div class="container nav-flex">
+        <a href="nacionais.html">NACIONAIS</a>
+        <a href="internacionais.html">INTERNACIONAIS</a>
+        <a href="ebooks.html">E-BOOKS</a>
+        <a href="academicos.html">ACADÊMICOS</a>
+        <a href="importados.html">IMPORTADOS</a>
+        <a href="papelaria.html">PAPELARIA</a>
+        <a href="ofertas.html">LIVROS EM OFERTA</a>
+    </div>
+   </nav>
+
+
+    <main class="container">
+        <h2 class="sessao-titulo">NACIONAIS</h2>
+        
+        <div class="grid-nacionais">
+            
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/8177vVn9v7L.jpg" class="book-cover">
+                <p>Dom Casmurro</p>
+                <p><strong>R$ 29,90</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Dom Casmurro', 29.90)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/81S8l-w8v1L.jpg" class="book-cover">
+                <p>Memórias Póstumas</p>
+                <p><strong>R$ 34,50</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Memórias Póstumas', 34.50)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/71O0R7Xb87L.jpg" class="book-cover">
+                <p>O Cortiço</p>
+                <p><strong>R$ 22,00</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('O Cortiço', 22.00)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/61Nl5u8O-0L.jpg" class="book-cover">
+                <p>A Hora da Estrela</p>
+                <p><strong>R$ 31,90</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('A Hora da Estrela', 31.90)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/91M9pM+68OL.jpg" class="book-cover">
+                <p>Grande Sertão</p>
+                <p><strong>R$ 89,90</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Grande Sertão', 89.90)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/91fSInE7zXL.jpg" class="book-cover">
+                <p>Vidas Secas</p>
+                <p><strong>R$ 42,00</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Vidas Secas', 42.00)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/51pS9kLz6HL.jpg" class="book-cover">
+                <p>Iracema</p>
+                <p><strong>R$ 19,90</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Iracema', 19.90)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/51WpA0pE4OL.jpg" class="book-cover">
+                <p>Capitães da Areia</p>
+                <p><strong>R$ 38,00</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Capitães da Areia', 38.00)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/81S7G1M9ZEL.jpg" class="book-cover">
+                <p>Quincas Borba</p>
+                <p><strong>R$ 27,90</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Quincas Borba', 27.90)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/51X5S7uUv8L.jpg" class="book-cover">
+                <p>Senhora</p>
+                <p><strong>R$ 21,50</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Senhora', 21.50)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/91F1P8N8f8L.jpg" class="book-cover">
+                <p>Macunaíma</p>
+                <p><strong>R$ 45,00</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Macunaíma', 45.00)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/71r9Wv2Lz3L.jpg" class="book-cover">
+                <p>O Ateneu</p>
+                <p><strong>R$ 24,90</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('O Ateneu', 24.90)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/8177vVn9v7L.jpg" class="book-cover">
+                <p>Quarto de Despejo</p>
+                <p><strong>R$ 36,00</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Quarto de Despejo', 36.00)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/81-f09Z7KHL.jpg" class="book-cover">
+                <p>A Relíquia</p>
+                <p><strong>R$ 24,00</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('A Relíquia', 24.00)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/61HAtR884sL.jpg" class="book-cover">
+                <p>Triste Fim</p>
+                <p><strong>R$ 19,90</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Triste Fim', 19.90)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://I/81L8k+D3/m.media-amazon.com/imagesQ1L.jpg" class="book-cover">
+                <p>São Bernardo</p>
+                <p><strong>R$ 38,50</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('São Bernardo', 38.50)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/51r9IclN+iL.jpg" class="book-cover">
+                <p>O Alienista</p>
+                <p><strong>R$ 15,00</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('O Alienista', 15.00)">ADICIONAR</button>
+            </article>
+
+            <article class="book-card">
+                <img src="https://m.media-amazon.com/images/I/81SZjMOvHxL.jpg" class="book-cover">
+                <p>Tudo é Rio</p>
+                <p><strong>R$ 35,00</strong></p>
+                <button class="btn-add" onclick="adicionarAoCarrinho('Tudo é Rio', 35.00)">ADICIONAR</button>
+            </article>
+
+        </div>
+
+        <div style="text-align: center; margin: 60px 0;">
+            <button class="btn-login" style="width: 250px;">VER MAIS LIVROS</button>
+        </div>
+    </main>
+
+    <footer class="footer-comum">
+    <div class="container">
+        <h3>FALE CONOSCO</h3>
+        <p>+55 (21) 99876-5432 ♦ faleconosco@readit.com.br</p>
+    </div>
+</footer>
+
+    <aside id="carrinho-painel" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>MEU CARRINHO</h3>
+            <button onclick="toggleCarrinho()">X</button>
+        </div>
+        <div id="carrinho-itens-lista"></div>
+        <div class="cart-footer">
+            <p>Total: <strong id="carrinho-subtotal">R$ 0,00</strong></p>
+            <button class="btn-login" onclick="window.location.href='pagamento.html'">FINALIZAR PEDIDO</button>
+        </div>
+    </aside>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
